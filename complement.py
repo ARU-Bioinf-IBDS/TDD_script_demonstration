@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """ script to calculate complement of a DNA sequence """
 import argparse
 
