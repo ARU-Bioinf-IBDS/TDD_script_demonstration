@@ -41,7 +41,10 @@ def main(test_override=None):
     """
     sequence, reverse = parse_command_line_args(
                         test_override=test_override)
-    print(f'debug sequence={sequence} reverse={reverse}')
+    if reverse:
+        raise NotImplementedError('reverse option not yet implemented')
+    else:
+        print(complement(sequence))
 
 
 if __name__ == '__main__':
