@@ -28,7 +28,10 @@ The idea of this repo is to show using a simple example how it is possible to wr
 
 * The development process will be recorded in commit 
   messages as well as in a GitHub issue #1 page 
-  available at the GitHub web site.
+  available at the GitHub web site (from the Issues tab) or
+  directly from:
+
+  https://github.com/ARU-Bioinf-IBDS/TDD_script_demonstration/issues/1
 
 
   GitHub issue pages are useful ways to record extra 
