@@ -1,4 +1,5 @@
 """ script to calculate complement of a DNA sequence """
+import argparse
 
 
 def parse_command_line_args(test_override=None):
@@ -13,6 +14,14 @@ def parse_command_line_args(test_override=None):
        reverse (boolean)
       )
     """
+    parser = argparse.ArgumentParser()
+    parser.add_argument('SEQUENCE')
+    parser.add_argument('-reverse', action='store_true')
+    if test_override is not None:
+        args = parser.parse_args(test_override)
+    else:
+        args = parser.parse_args()
+    return args.SEQUENCE, args.reverse
 
 
 def complement(seq):
