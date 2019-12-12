@@ -15,9 +15,13 @@ def parse_command_line_args(test_override=None):
        reverse (boolean)
       )
     """
-    parser = argparse.ArgumentParser()
+    
+    description='Prints the complement of the input DNA sequence.'
+    parser = argparse.ArgumentParser(description=description)
     parser.add_argument('SEQUENCE')
-    parser.add_argument('-reverse', action='store_true')
+    parser.add_argument('-reverse', action='store_true',
+                        help='prints the reverse complement rather'
+                             ' than the forward complement.')
     if test_override is not None:
         args = parser.parse_args(test_override)
     else:

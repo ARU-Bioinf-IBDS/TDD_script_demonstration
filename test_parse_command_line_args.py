@@ -23,11 +23,10 @@ def test_help_message(capsys):
     with pytest.raises(SystemExit):
         parse_command_line_args(test_override=['-h'])
     help_message = capsys.readouterr().out
-    assert 'prints complement of the input DNA sequence' in help_message
+    assert 'Prints the complement of the input DNA sequence' in help_message
     assert 'usage' in help_message
     assert 'help' in help_message
-    assert 'prints the reverse complement rather ' \
-           'than the forward complement' in help_message
+    assert 'prints the reverse complement' in help_message
 
 
 def test_with_empty_args_raises_error():
